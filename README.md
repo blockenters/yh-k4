@@ -94,6 +94,10 @@ https://luvris2.tistory.com/
 
 https://vision-ai.tistory.com/
 
+https://hyunsungstory.tistory.com/
+
+https://coding-jisu.tistory.com/
+
 https://mscha.tistory.com/
 
 https://story-jy.tistory.com/
