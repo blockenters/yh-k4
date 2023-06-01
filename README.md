@@ -58,6 +58,8 @@ https://wikidocs.net/7014
 
 https://pandas.pydata.org/docs/reference/api/pandas.Series.str.upper.html
 
+시간을 문자열로 포맷팅 : https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior 
+
 ---
 
 ### 데이터 제공 사이트들 
