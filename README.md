@@ -17,6 +17,7 @@
 
 - 앱 대시보드 개발 프로젝트 : https://docs.google.com/presentation/d/1_gN-baMFspcmg2XvooeBcQMLhNMDYA6vtTFGP9EVaFA/edit?usp=sharing
 
+- 앱 대시보드 URL : https://docs.google.com/spreadsheets/d/1jKqZyr-0eyfyNhDAQuokCXEcr98l3BSMscRwrmkmU8Y/edit?usp=sharing
 
 ---
 
