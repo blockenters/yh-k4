@@ -19,6 +19,10 @@ MySQL Workbench 설치 에러시 : https://musclebear.tistory.com/115
 강의자료 : https://docs.google.com/presentation/d/1Mm6h023No5t2jb5VYR8fDsjamXuvilSF7mEXt9US71E/edit?usp=sharing
 
 
+- 실습 : https://docs.google.com/presentation/d/1KPZiQNb8MfKb3tdm01CnENI1CoZ0g7Ga1c8yEStVDMo/edit?usp=sharing
+
+
+
 
 ---
 
