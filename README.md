@@ -27,6 +27,10 @@ MySQL Workbench 설치 에러시 : https://musclebear.tistory.com/115
 
 - DB 실습문제 2 : https://docs.google.com/presentation/d/1EUJFxMxHrkL9IQl_gIOF5FwitWfvUsrKnpW8vaWzSvs/edit?usp=sharing
 
+- DB 실습문제 3 : https://docs.google.com/presentation/d/1bJocq81ssqBg6Vcw5UYonitn5nZslBYgY8XZIrQHCfQ/edit?usp=sharing
+
+- DB 실습문제 4 : https://docs.google.com/presentation/d/14hsC9F9mN-aGIclRCshFwoGrxAKnPKOQ_xUEwIkVgXk/edit?usp=sharing
+
 
 ---
 
