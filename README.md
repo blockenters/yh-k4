@@ -12,7 +12,7 @@
 
 ## API 서버 개발
 
-- 람다용 파이썬 가상환경 : $conda create -n 가상환경이름 python=3.10 numpy scipy matplotlib ipython scikit-learn pandas pillow jupyter seaborn
+- 람다용 파이썬 가상환경 : $conda create -n 가상환경이름 python=3.10 
 
 - API 서버 : https://docs.google.com/presentation/d/1dsCZZ4LjywFe_H5wDFvGe4UVmiB2HiaBIdcmugTQorU/edit?usp=sharing
 
