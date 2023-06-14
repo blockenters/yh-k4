@@ -10,6 +10,18 @@
 
 ---
 
+## API 서버 개발
+
+- 람다용 파이썬 가상환경 : $conda create -n 가상환경이름 python=3.9 numpy scipy matplotlib ipython scikit-learn pandas pillow jupyter seaborn
+
+- API 서버 : https://docs.google.com/presentation/d/1dsCZZ4LjywFe_H5wDFvGe4UVmiB2HiaBIdcmugTQorU/edit?usp=sharing
+
+- Python 으로 MySQL 작업 : https://docs.google.com/presentation/d/1adHZUnwVZ0jA3rAO68K5MnsndpWhl9IR2q_f70wE5bQ/edit?usp=sharing
+
+- 포스트맨 사용법 : https://docs.google.com/presentation/d/1YVJtjcqSCC5Z6zFFE-ix8eugs_uh_vdwZmrvgx5VBKQ/edit?usp=sharing
+
+
+
 ## DB
 
 데이터베이스 설치 : https://docs.google.com/presentation/d/12Xm89yzn-Lk6eacTjSn59hXrB28Ip4waDyPfe29jXDE/edit?usp=sharing
