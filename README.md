@@ -40,7 +40,7 @@ RDBMS vs NoSQL : https://vision-ai.tistory.com/entry/RDBMS-vs-NoSQL
 
 - DB 실습문제 5 : https://docs.google.com/presentation/d/1G15cXjAkUPHqiC8A0dylpeHdSkO-lYUaTbeDJSpaHIo/edit?usp=sharing
 
-
+- DB 실습문제 6 : https://docs.google.com/presentation/d/1ElLC3O8C6sslxLlmqoydD5OwJgDQGWuAJuWY3Oevey0/edit?usp=sharing
 
 ---
 
