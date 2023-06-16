@@ -79,11 +79,52 @@ class RecipeListResource(Resource) :
     
     
     def get(self) :
-        # 여러분의 코드 작성.
-        print("레시피 가져오는 API 동작했음.")
+        
+        # 1. 클라이언트로 부터 데이터를 받아온다.
 
+        # 2. 저장된 레시피 리스트를 DB로부터 가져온다.
 
-        return {'result' : 'success', 'count' : 3}, 400
+        # 2-1. DB 커넥션 
+
+        try : 
+
+            connection = get_connection()
+
+            # 2-1. 쿼리문 만든다. 
+            query = '''select * from recipe
+                    order by created_at desc; '''
+            
+            # 2-2. 변수처리할 부분은 변수처리한다. 
+
+            # 2-3. 커서 가져온다.
+            cursor = connection.cursor(dictionary= True)
+
+            # 2-4. 쿼리문을 커서로 실행한다.
+            cursor.execute(query)
+
+            # 2-5. 실행 결과를 가져온다.
+            result_list = cursor.fetchall()
+
+            print(result_list)
+
+            cursor.close()
+            connection.close()
+
+        except Error as e :
+            print(e)
+            return {'result' : 'fail', 'error' : str(e)}, 500
+
+        # 3. 데이터가공이 필요하면, 가공한 후에
+        #    클라이언트에 응답한다.
+        i = 0
+        for row in result_list :
+            result_list[i]['created_at'] = row['created_at'].isoformat()    
+            result_list[i]['updated_at'] = row['updated_at'].isoformat()    
+            i = i + 1
+
+        return {'result' : 'success', 
+                'count' : len(result_list),
+                'items' : result_list}
         
 
 
