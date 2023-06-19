@@ -1,3 +1,4 @@
+from flask_jwt_extended import get_jwt_identity, jwt_required
 from flask_restful import Resource
 from flask import request
 import mysql.connector
@@ -128,6 +129,7 @@ class RecipeResource(Resource) :
 
 class RecipeListResource(Resource) :
     
+    @jwt_required()
     def post(self) :
 
         # {
@@ -142,7 +144,10 @@ class RecipeListResource(Resource) :
         # 1. 클라이언트가 보낸 데이터를 받아온다.
         data = request.get_json()
 
-        print(data)
+        # 1-1. 헤더에 담긴 JWT 토큰 받아온다.
+        user_id = get_jwt_identity()
+
+        print(user_id)
 
         # 2. DB 에 저장한다.        
         try :
@@ -153,15 +158,16 @@ class RecipeListResource(Resource) :
             ###### 중요!!! 컬럼과 매칭되는 데이터만 %s 로 바꿔준다.
             query = '''insert into recipe
                     (name, description, num_of_servings, cook_time,
-                        directions , is_publish)
+                        directions , is_publish, user_id)
                     values
-                    (%s, %s, %s, %s, %s, %s);'''
+                    (%s, %s, %s, %s, %s, %s, %s);'''
             # 2-3. 쿼리에 매칭되는 변수 처리!  중요! 튜플로 처리해준다!
             record = ( data['name'], data['description'],
                       data['num_of_servings'],
                        data['cook_time'],
                         data['directions'],
-                         data['is_publish'] )
+                         data['is_publish'], 
+                           user_id)
             # 2-4. 커서를 가져온다.
             cursor = connection.cursor()
 
