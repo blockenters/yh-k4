@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Api
+from resources.memo import MemoListResource, MemoResource
 
 from resources.user import UserLoginResource, UserLogoutResource, UserRegisterResource, jwt_blocklist
 
@@ -29,6 +30,8 @@ api = Api(app)
 api.add_resource(UserRegisterResource , '/user/register')
 api.add_resource( UserLoginResource  , '/user/login')
 api.add_resource( UserLogoutResource , '/user/logout')
+api.add_resource( MemoListResource , '/memo')
+api.add_resource( MemoResource, '/memo/<int:memo_id>')
 
 if __name__ == '__main__' :
     app.run()
