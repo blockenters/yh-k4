@@ -24,6 +24,8 @@
 
 - 포스트맨에서 인증토큰 셋팅하는 방법 : https://docs.google.com/presentation/d/1YVJtjcqSCC5Z6zFFE-ix8eugs_uh_vdwZmrvgx5VBKQ/edit?usp=sharing
 
+- 실습 1 : https://docs.google.com/presentation/d/1QKlMbRgWOUaHxqatJGUetrf-6WSSWqdTpBZqv7FW1t4/edit?usp=sharing
+
 
 
 ## DB
