@@ -31,7 +31,11 @@
 - 실습 2 : https://docs.google.com/presentation/d/16P5E-14EDVCuM3oWA9yWiStA6xZuWJvGjNuzFHdZdrY/edit?usp=sharing
 
 
+- 구글 Vision Api : https://cloud.google.com/vision/docs/drag-and-drop?hl=ko
 
+- aws rekognition 매뉴얼 : https://docs.aws.amazon.com/ko_kr/rekognition/latest/dg/what-is.html
+
+- 실습 3 : https://docs.google.com/presentation/d/1wKcb0QAeAdUY4W8YHZZaUhARrmrYMdyWSHvhfNPZZ0U/edit?usp=sharing
 
 ## DB
 
