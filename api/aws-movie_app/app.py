@@ -1,3 +1,5 @@
+import serverless_wsgi
+
 from flask import Flask
 from flask_restful import Api
 from resources.recommend import MovieRecommendResource
@@ -31,6 +33,9 @@ api.add_resource( UserLoginResource  , '/user/login')
 api.add_resource( UserLogoutResource , '/user/logout')
 api.add_resource( ReviewListResource , '/movie/<int:movie_id>/review')
 api.add_resource( MovieRecommendResource , '/movie/recommend')
+
+def handler(event, context):
+    return serverless_wsgi.handle_request(app, event,context)
 
 
 if __name__ == '__main__' :
