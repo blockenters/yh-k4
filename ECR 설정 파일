@@ -1,21 +1,54 @@
-ecr:BatchCheckLayerAvailability
-ecr:BatchDeleteImage
-ecr:BatchGetImage
-ecr:CompleteLayerUpload
-ecr:DeleteLifecyclePolicy
-ecr:DeleteRepository
-ecr:DeleteRepositoryPolicy
-ecr:DescribeImages
-ecr:DescribeRepositories
-ecr:GetAuthorizationToken
-ecr:GetDownloadUrlForLayer
-ecr:GetLifecyclePolicy
-ecr:GetLifecyclePolicyPreview
-ecr:GetRepositoryPolicy
-ecr:InitiateLayerUpload
-ecr:ListImages
-ecr:PutImage
-ecr:PutLifecyclePolicy
-ecr:SetRepositoryPolicy
-ecr:StartLifecyclePolicyPreview
-ecr:UploadLayerPart
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "new statement",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::633208967007:user/block2"
+      },
+      "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchDeleteImage",
+        "ecr:BatchGetImage",
+        "ecr:CompleteLayerUpload",
+        "ecr:DeleteLifecyclePolicy",
+        "ecr:DeleteRepository",
+        "ecr:DeleteRepositoryPolicy",
+        "ecr:DescribeImages",
+        "ecr:DescribeRepositories",
+        "ecr:GetAuthorizationToken",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetLifecyclePolicy",
+        "ecr:GetLifecyclePolicyPreview",
+        "ecr:GetRepositoryPolicy",
+        "ecr:InitiateLayerUpload",
+        "ecr:ListImages",
+        "ecr:PutImage",
+        "ecr:PutLifecyclePolicy",
+        "ecr:SetRepositoryPolicy",
+        "ecr:StartLifecyclePolicyPreview",
+        "ecr:UploadLayerPart"
+      ]
+    },
+    {
+      "Sid": "LambdaECRImageRetrievalPolicy",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Action": [
+        "ecr:BatchGetImage",
+        "ecr:DeleteRepositoryPolicy",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetRepositoryPolicy",
+        "ecr:SetRepositoryPolicy"
+      ],
+      "Condition": {
+        "StringLike": {
+          "aws:sourceArn": "arn:aws:lambda:ap-northeast-2:633208967007:function:*"
+        }
+      }
+    }
+  ]
+}
