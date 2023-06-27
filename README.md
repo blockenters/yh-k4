@@ -36,6 +36,8 @@
 
 - aws rekognition 매뉴얼 : https://docs.aws.amazon.com/ko_kr/rekognition/latest/dg/what-is.html
 
+- 오픈 API 사용 : https://docs.google.com/presentation/d/1Sis_PGDrhi61UvU1KrmZCIPVud2qjsaoFe7haKJ4bLY/edit?usp=sharing
+
 - 실습 3 : https://docs.google.com/presentation/d/1wKcb0QAeAdUY4W8YHZZaUhARrmrYMdyWSHvhfNPZZ0U/edit?usp=sharing
 
 ## DB
