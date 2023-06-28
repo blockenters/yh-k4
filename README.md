@@ -10,6 +10,17 @@
 
 ---
 
+### Java
+
+- 윈도우즈에 자바 설치 : https://languagestory.tistory.com/11
+
+- 이클립스로 자바 개발방법 : https://mozi.tistory.com/429
+
+- 자바 문법 책 : https://block1-image-test.s3.ap-northeast-2.amazonaws.com/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_basic_%EC%9A%94%EC%95%BD%EC%A7%91.pdf
+
+---
+
+
 ## API 서버 개발
 
 - 람다용 파이썬 가상환경 : $conda create -n 가상환경이름 python=3.10 
