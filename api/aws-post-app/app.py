@@ -4,7 +4,8 @@ from config import Config
 
 from flask_jwt_extended import JWTManager
 from resources.follow import FollowResource
-from resources.post import PostingListResource, PostingResource
+from resources.like import LikeResource
+from resources.post import PostFollowResource, PostingListResource, PostingResource
 
 from resources.user import UserLoginResource, UserLogoutResource, UserRegisterResource, jwt_blocklist
 
@@ -32,6 +33,8 @@ api.add_resource( UserLogoutResource , '/user/logout')
 api.add_resource( PostingListResource , '/post')
 api.add_resource( PostingResource, '/post/<int:post_id>')
 api.add_resource( FollowResource , '/follow/<int:followee_id>')
+api.add_resource( LikeResource , '/post/<int:post_id>/like')
+api.add_resource( PostFollowResource , '/post/follow')
 
 
 if __name__ == '__main__' :

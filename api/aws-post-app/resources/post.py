@@ -15,6 +15,61 @@ import boto3
 from datetime import datetime
 
 
+
+class PostFollowResource(Resource) :
+    
+    @jwt_required()
+    def get(self):
+        
+        user_id = get_jwt_identity()
+        offset = request.args.get('offset')
+        limit = request.args.get('limit')
+
+        try:
+            connection = get_connection()
+            query = '''select p.*, u.email , 
+                            if( l.id is null, 0 , 1 ) as isLike,
+                            count( l2.postId ) as likeCnt     
+                            from follow f
+                        join post p
+                            on f.followeeId = p.userId
+                        join user u 
+                            on p.userId = u.id
+                        left join likes l 
+                            on l.userId = %s and p.id = l.postId
+                        left join likes l2
+                            on p.id = l2.postId
+                        where f.followerId = %s
+                        group by p.id 
+                        limit '''+offset+''', '''+limit+''';'''
+            record = (user_id, user_id)
+
+            cursor = connection.cursor(dictionary=True)
+            cursor.execute(query, record)
+
+            result_list = cursor.fetchall()
+
+            print(result_list)
+
+            cursor.close()
+            connection.close()
+
+        except Error as e:
+            print(e)
+            return {'result':'fail','error':str(e)},500
+
+        i = 0
+        for row in result_list:
+            result_list[i]['createdAt'] = row['createdAt'].isoformat()
+            result_list[i]['updatedAt'] = row['updatedAt'].isoformat()
+            i = i + 1
+        
+        return {'result' : 'success',
+                'count' : len(result_list),
+                'items' : result_list}
+
+
+
 class PostingListResource(Resource) :
 
     @jwt_required()
