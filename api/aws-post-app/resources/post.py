@@ -16,6 +16,61 @@ import boto3
 from datetime import datetime
 
 
+class PostSearchResource(Resource) :
+
+    @jwt_required()
+    def get(self):
+
+        user_id = get_jwt_identity()
+        offset = request.args.get('offset')
+        limit = request.args.get('limit')
+        tag = request.args.get('tag')
+
+        try:
+            connection = get_connection()
+            query = '''select p.*, u.email,
+                        count(l2.postId) as likeCnt,
+                        if(l.id is null, 0, 1) as isLike
+                        from tag_name tn
+                        join tag t
+                            on tn.id = t.tagNameId
+                        join post p 
+                            on t.postId = p.id
+                        join user u 
+                            on p.userId = u.id
+                        left join likes l 
+                            on p.id = l.postId and l.userId = %s
+                        left join likes l2 
+                            on p.id = l2.postId
+                        where tn.name like '%'''+tag+'''%'
+                        group by p.id
+                        limit '''+offset+''', '''+limit+''';'''
+            record = (user_id, )
+
+            cursor = connection.cursor(dictionary=True)
+
+            cursor.execute(query, record)
+
+            result_list = cursor.fetchall()
+
+            cursor.close()
+            connection.close()
+
+        except Error as e:
+            print(e)
+            return {'result':'fail', 'error':str(e)},500
+
+        i = 0
+        for row in result_list:
+            result_list[i]['createdAt'] = row['createdAt'].isoformat()
+            result_list[i]['updatedAt'] = row['updatedAt'].isoformat()
+            i = i + 1
+
+        return {'result':'success',
+                'count' : len(result_list),
+                'items' : result_list}
+
+
 
 class PostFollowResource(Resource) :
     
