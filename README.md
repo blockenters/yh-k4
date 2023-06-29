@@ -16,6 +16,8 @@
 
 - 이클립스로 자바 개발방법 : https://mozi.tistory.com/429
 
+- 이클립스 콘솔창 한글깨짐 해결 방법 : https://error-nono.tistory.com/entry/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4-%EC%BD%98%EC%86%94-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95
+
 - 자바 문법 책 : https://block1-image-test.s3.ap-northeast-2.amazonaws.com/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_basic_%EC%9A%94%EC%95%BD%EC%A7%91.pdf
 
 - https://docs.google.com/presentation/d/1UCHPLLRW9znNFxF5aD9bpM4QeaivKl43PTAWJQn5oL0/edit?usp=sharing
