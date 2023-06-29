@@ -3,6 +3,7 @@ from flask_restful import Resource
 from flask import request
 import mysql.connector
 from mysql.connector import Error
+import requests
 from config import Config
 
 from mysql_connection import get_connection
@@ -113,7 +114,28 @@ class PostingListResource(Resource) :
 
         print(label_list)
 
+        # 파파고 API를 이용해서, 태그를 한글로 바꾼다.                
+
+        label_str = ','.join(label_list)
+
+        headers = { 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8' ,
+                   'X-Naver-Client-Id' : Config.X_NAVER_CLIENT_ID,
+                    'X-Naver-Client-Secret' : Config.X_NAVER_CLIENT_SECRET }
+        data = {'source' : 'en' , 
+                'target' : 'ko',
+                'text' : label_str  }
+
+        response = requests.post("https://openapi.naver.com/v1/papago/n2mt",
+                      headers= headers,
+                      data= data )
+
+
+        print(response.json()['message']['result']['translatedText'])
+
+        translated_text = response.json()['message']['result']['translatedText']
         
+        label_list = translated_text.split(', ')
+
         # 3. DB에 사진의 url와 content내용을 저장한다.
         try :
             connection = get_connection()
@@ -129,8 +151,6 @@ class PostingListResource(Resource) :
             # 포스트 테이블에, 포스팅 내용을 넣으면서, 
             # 이 아이디값을 가져와야지, 태그를 만들 수 있다
             post_id = cursor.lastrowid
-
-            print('post_id : ', post_id)
 
             # 태그 이름을 하나씩 가져와서, 테이블에 있는지 확인한다.
             # 테이블에 없으면, insert 해준다. 
@@ -148,7 +168,7 @@ class PostingListResource(Resource) :
             
             for label in label_list : 
                 record2 = (label , )
-                print(label)
+                
                 cursor = connection.cursor(dictionary=True)
                 cursor.execute(query2, record2)
                 result_list = cursor.fetchall()
@@ -158,11 +178,9 @@ class PostingListResource(Resource) :
                     cursor.execute(query3, record3)
                     tag_name_id = cursor.lastrowid
 
-                    print('count == 0', 'tag_name_id', tag_name_id, ', label : ', label)
                 else :
                     tag_name_id = result_list[0]['id']
 
-                    print('count == 1', 'tag_name_id', tag_name_id, ', label : ', label)
                 
                 # 태그 테이블에 데이터 insert 
                 record4 = (post_id, tag_name_id)
