@@ -9,6 +9,8 @@ passlib
 flask-jwt-extended
 email-validator
 
+requests==2.25.0
+
 
 
 
