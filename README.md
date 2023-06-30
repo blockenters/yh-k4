@@ -30,6 +30,8 @@
 
 - https://docs.google.com/presentation/d/1MnGCWMgrw0ylDIM_AVLIhyLNwwKR1Ck1d0Y_uY0FnpQ/edit?usp=sharing
 
+- https://docs.google.com/presentation/d/1dU8iCAYL_vGOI2Dude6rdUWILgJImLt_C2EP-YmDRBs/edit?usp=sharing
+
 
 ---
 
