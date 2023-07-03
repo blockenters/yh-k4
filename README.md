@@ -32,6 +32,12 @@
 
 - https://docs.google.com/presentation/d/1dU8iCAYL_vGOI2Dude6rdUWILgJImLt_C2EP-YmDRBs/edit?usp=sharing
 
+- https://docs.google.com/presentation/d/15Gd-grbYACYDL21r2Q5qQgfena4WuljQKFAMDFDsWdA/edit?usp=sharing
+
+- https://docs.google.com/presentation/d/1guTf8AFfpK-ei3uLza9cybO9BFlDCH5Q7KRWlivJmM8/edit?usp=sharing
+
+
+
 
 ---
 
