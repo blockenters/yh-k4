@@ -40,7 +40,9 @@
 
 - https://docs.google.com/presentation/d/1kb1YspzjeY4Gjnes-H4Fz2V22NF94UlKgdyJrzzz6c0/edit?usp=sharing
 
+- 자바 연습문제 : https://wikidocs.net/157998
 
+  
 ---
 
 
