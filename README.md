@@ -36,7 +36,9 @@
 
 - https://docs.google.com/presentation/d/1guTf8AFfpK-ei3uLza9cybO9BFlDCH5Q7KRWlivJmM8/edit?usp=sharing
 
+- https://docs.google.com/presentation/d/1Kp24OKv0Y72o51WqCqT-1Rx0ljtuIGZfRG341lOgvFw/edit?usp=sharing
 
+- https://docs.google.com/presentation/d/1kb1YspzjeY4Gjnes-H4Fz2V22NF94UlKgdyJrzzz6c0/edit?usp=sharing
 
 
 ---
