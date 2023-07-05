@@ -23,6 +23,14 @@
 
 - 실습 1 : https://docs.google.com/presentation/d/1POAPZf0juVnhXe2MnZTE0YaeUMlk7SHC2j9-4IdPbus/edit?usp=sharing
 
+- 실습 2 : https://docs.google.com/presentation/d/1iF3dxBLcCB_CTZEVPRuIMa01HtsYiZmTYcqvUOSFI1E/edit?usp=sharing
+
+- 퀴즈앱 데이터 : https://drive.google.com/file/d/1viJaAny2v_m5LxlKM9e1d9ilejNwYuWj/view?usp=sharing
+
+- 알람소리 파일 : https://block1-image-test.s3.ap-northeast-2.amazonaws.com/alarm.zip
+
+- 실습 3 : https://docs.google.com/presentation/d/1UlvkfNeE90mQo5LfnohCxBTw1k5c4QH4VidOZhzLD48/edit?usp=sharing
+
 ---
 
 ### Java
