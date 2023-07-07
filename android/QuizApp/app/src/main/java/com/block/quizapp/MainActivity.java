@@ -1,7 +1,9 @@
 package com.block.quizapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -106,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
 
             txtResult.setText("지금까지 맞춘 문제는 "+count+"개입니다.");
 
+            // 팝업을 띄우자.
+            showAlertDialog();
+
             return false;
         }
 
@@ -144,4 +149,48 @@ public class MainActivity extends AppCompatActivity {
         quizArrayList.add(q10);
     }
 
+
+
+    // AlertDialog 알러트 다이얼로그 만들기
+
+    private void showAlertDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("퀴즈 끝~");
+        builder.setMessage("지금까지 맞춘 문제는 "+count+"개입니다.");
+        // 이 다이얼로그의 외곽부분을 눌렀을때, 사라지지 않도록 하는 코드
+        builder.setCancelable(false);
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // 퀴즈를 처음부터 다시 풀수 있도록 할것이다.
+
+                currentQuizIndex = 0;
+                Quiz quiz = quizArrayList.get(currentQuizIndex);
+                txtQuiz.setText(quiz.question);
+                txtResult.setText("결과");
+
+                progressBar.setProgress(currentQuizIndex+1, true);
+
+                count = 0;
+
+            }
+        });
+        builder.setNegativeButton("종료", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                // 현재의 액티비티(MainActivity)를 종료시키는 코드!
+                finish();
+
+            }
+        });
+        builder.show();
+    }
+
+
 }
+
+
+
+
+
