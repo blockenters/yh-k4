@@ -31,6 +31,8 @@
 
 - 실습 3 : https://docs.google.com/presentation/d/1UlvkfNeE90mQo5LfnohCxBTw1k5c4QH4VidOZhzLD48/edit?usp=sharing
 
+- 안드로이드 Activity Life Cycle : https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko
+
 ---
 
 ### Java
