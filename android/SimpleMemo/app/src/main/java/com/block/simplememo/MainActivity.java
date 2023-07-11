@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
-
         // 메모버튼 누르면, 메모 생성해서, 화면에 나오도록 개발.
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,13 +61,17 @@ public class MainActivity extends AppCompatActivity {
 
                 // 3. 메모가 여러개이므로, 어레이리스트에 넣어준다.
 
-                memoList.add(memo);
+                memoList.add(0, memo);
 
-                adapter = new MemoAdapter(MainActivity.this, memoList);
-                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
 
+                editMemo.setText("");
             }
         });
+
+
+        adapter = new MemoAdapter(MainActivity.this, memoList);
+        recyclerView.setAdapter(adapter);
 
     }
 
