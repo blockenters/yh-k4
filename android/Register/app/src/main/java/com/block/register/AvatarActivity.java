@@ -21,10 +21,14 @@ public class AvatarActivity extends AppCompatActivity {
 
     boolean isSelected = false;
 
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avatar);
+
+        email = getIntent().getStringExtra("email");
 
         imgAvatar = findViewById(R.id.imgAvatar);
         btnRabbit = findViewById(R.id.btnRabbit);
@@ -78,6 +82,9 @@ public class AvatarActivity extends AppCompatActivity {
                 // 새로운 액티비티를 띄운다.
 
                 Intent intent = new Intent(AvatarActivity.this, WelcomeActivity.class);
+
+                intent.putExtra("email", email);
+
                 startActivity(intent);
 
                 finish();
