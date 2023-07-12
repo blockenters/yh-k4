@@ -37,9 +37,11 @@
 
 - 실습 5 : https://docs.google.com/presentation/d/1_s6-IUvFuJmjeaQmsr9OBdii0eQvbLXBF2kF5SoQVvI/edit?usp=sharing
 
-- 실습 6 : https://docs.google.com/presentation/d/12YM4BGCNdWxSw4LQtVwBCUpb0R1gIKmgfm0Az_vxXnw/edit?usp=sharing
+- 실습 6 : https://docs.google.com/presentation/d/18exxRKr1y4STChbEeq_C9HyEJbORub116XD16bd7wc0/edit?usp=sharing
 
-- 실습 7 : https://docs.google.com/presentation/d/18exxRKr1y4STChbEeq_C9HyEJbORub116XD16bd7wc0/edit?usp=sharing
+- 실습 7 : https://docs.google.com/presentation/d/12YM4BGCNdWxSw4LQtVwBCUpb0R1gIKmgfm0Az_vxXnw/edit?usp=sharing
+ 
+- 실습 8 : https://docs.google.com/presentation/d/1jwPbog1NVdTyqSh9q_v2jkcS738Qsq3dq66hhrJ7E4Q/edit?usp=sharing
 
 ---
 
