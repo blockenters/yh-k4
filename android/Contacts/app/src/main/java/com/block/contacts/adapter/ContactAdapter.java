@@ -84,6 +84,13 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
                     // UpdateActivity 를 실행하는 코드를 여기에 작성
 
                     Intent intent = new Intent(context, UpdateActivity.class);
+
+                    int index = getAdapterPosition();
+
+                    Contact contact = contactArrayList.get(index);
+
+                    intent.putExtra("contact", contact);
+
                     context.startActivity(intent);
 
                 }
