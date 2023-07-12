@@ -37,9 +37,9 @@
 
 - 실습 5 : https://docs.google.com/presentation/d/1_s6-IUvFuJmjeaQmsr9OBdii0eQvbLXBF2kF5SoQVvI/edit?usp=sharing
 
-- 실습 6 : https://docs.google.com/presentation/d/18exxRKr1y4STChbEeq_C9HyEJbORub116XD16bd7wc0/edit?usp=sharing
+- 실습 6 : https://docs.google.com/presentation/d/12YM4BGCNdWxSw4LQtVwBCUpb0R1gIKmgfm0Az_vxXnw/edit?usp=sharing
 
-- 실습 7 : https://docs.google.com/presentation/d/12YM4BGCNdWxSw4LQtVwBCUpb0R1gIKmgfm0Az_vxXnw/edit?usp=sharing
+- 실습 7 : https://docs.google.com/presentation/d/1KPEm7OGyJBkId7nojHrImhoP265GzTk-nNTQIG7F08o/edit?usp=sharing
  
 - VSC 에서 깃허브 연동 : https://docs.google.com/presentation/d/1mmr-fPXbF4thl-Y3clPj_4ngRcY3EDkpIdYuZOWOIcU/edit?usp=drive_link
 
