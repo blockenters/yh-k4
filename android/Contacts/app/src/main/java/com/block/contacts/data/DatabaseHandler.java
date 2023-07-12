@@ -75,4 +75,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return contactArrayList;
     }
 
+
+    public void deleteContact(Contact contact){
+        SQLiteDatabase db = getWritableDatabase();
+
+        String query = "delete from contact " +
+                        "where id = ?";
+        String[] record = { contact.id+"" };
+
+        db.execSQL(query, record);
+
+        db.close();
+
+    }
+
 }

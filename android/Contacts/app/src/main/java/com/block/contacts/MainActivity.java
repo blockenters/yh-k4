@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         // contactArrayList 에 데이터 있어야 한다.
         // DB 에서 가져오면 된다.
 
@@ -51,15 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ContactAdapter(MainActivity.this, contactArrayList);
         recyclerView.setAdapter(adapter);
+
     }
-
-
-
-
-
-
-
-
-
-
 }
