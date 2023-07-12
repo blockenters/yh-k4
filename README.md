@@ -43,6 +43,8 @@
  
 - 실습 8 : https://docs.google.com/presentation/d/1jwPbog1NVdTyqSh9q_v2jkcS738Qsq3dq66hhrJ7E4Q/edit?usp=sharing
 
+- VSC 에서 깃허브 연동 : https://docs.google.com/presentation/d/1mmr-fPXbF4thl-Y3clPj_4ngRcY3EDkpIdYuZOWOIcU/edit?usp=drive_link
+
 ---
 
 ### Java
