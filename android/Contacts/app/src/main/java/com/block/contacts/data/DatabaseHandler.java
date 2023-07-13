@@ -89,4 +89,19 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     }
 
+
+    public void updateContact(Contact contact) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        String query = "update contact " +
+                        "set name = ? , phone = ? " +
+                        "where id = ?";
+
+        String[] record = { contact.name , contact.phone, contact.id+"" };
+
+        db.execSQL(query, record);
+
+        db.close();
+
+    }
 }
