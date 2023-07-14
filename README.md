@@ -53,6 +53,12 @@
 
 - 실습 10용 URL : https://block1-image-test.s3.ap-northeast-2.amazonaws.com/employees.json
 
+- 네트워크 처리 표시, 액션바와 메뉴, FAB 을 적용하여 업그레이드 하기
+
+- 실습 11 : https://docs.google.com/presentation/d/1o9pzNaauTWSAInM6Yo6QVbiNGUcNIuVprLOgAZji_DI/edit?usp=sharing
+
+- 실습 11용 URL : https://block1-image-test.s3.ap-northeast-2.amazonaws.com/posting.json
+
 ---
 
 ### Java
