@@ -6,8 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.block.contacts.adapter.ContactAdapter;
 import com.block.contacts.data.DatabaseHandler;
@@ -19,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnAdd;
 
+    EditText editSearch;
+    ImageView imgCancel;
+
     RecyclerView recyclerView;
     ContactAdapter adapter;
     ArrayList<Contact> contactArrayList = new ArrayList<>();
@@ -29,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnAdd = findViewById(R.id.btnAdd);
+
+        editSearch = findViewById(R.id.editSearch);
+        imgCancel = findViewById(R.id.imgCancel);
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -43,6 +53,48 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String keyword = editSearch.getText().toString().trim();
+
+                // db에서 검색한후
+                DatabaseHandler db = new DatabaseHandler(MainActivity.this, "contact_db", null, 1);
+
+                contactArrayList.clear();
+
+                contactArrayList.addAll( db.searchMemo(keyword) );
+
+                // 결과를 화면에 보여준다.
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+        imgCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseHandler handler = new DatabaseHandler(MainActivity.this, "contact_db", null, 1);
+
+                contactArrayList.clear();
+
+                contactArrayList.addAll( handler.getAllContacts() );
+
+                adapter.notifyDataSetChanged();
+
+                editSearch.setText("");
+
+            }
+        });
 
     }
 
@@ -54,7 +106,10 @@ public class MainActivity extends AppCompatActivity {
         // DB 에서 가져오면 된다.
 
         DatabaseHandler handler = new DatabaseHandler(MainActivity.this, "contact_db", null, 1 );
-        contactArrayList = handler.getAllContacts();
+
+        contactArrayList.clear();
+
+        contactArrayList.addAll( handler.getAllContacts() );
 
         adapter = new ContactAdapter(MainActivity.this, contactArrayList);
         recyclerView.setAdapter(adapter);

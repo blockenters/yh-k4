@@ -104,4 +104,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
 
     }
+
+    public ArrayList<Contact> searchMemo(String keyword) {
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        String query = "select * " +
+                "from contact " +
+                "where name like '%"+keyword+"%' or phone like '%"+keyword+"%' ;";
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        ArrayList<Contact> contactArrayList = new ArrayList<>();
+
+        if(cursor.moveToFirst()){
+            do {
+
+                int id = cursor.getInt(0);
+                String name = cursor.getString(1);
+                String phone = cursor.getString(2);
+
+                Contact contact = new Contact(id, name, phone);
+
+                contactArrayList.add(contact);
+
+            } while (cursor.moveToNext());
+        }
+
+        return contactArrayList;
+    }
 }
