@@ -49,6 +49,10 @@
 
 - Json 샘플 URL 1 : https://jsonplaceholder.typicode.com
 
+- 실습 10 : https://docs.google.com/presentation/d/10kvtW8KPNxwYRZwxn5AccK2XpCUd73iP4HAyk2bULPc/edit?usp=sharing
+
+- 실습 10용 URL : https://block1-image-test.s3.ap-northeast-2.amazonaws.com/employees.json
+
 ---
 
 ### Java
